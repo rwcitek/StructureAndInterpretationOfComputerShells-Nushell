@@ -9,3 +9,12 @@ You can define thins in there and selectively export them:
 - def s (custom commands: read functions)
 - env : run a block and preserve its values set therein in the current scope
 
+
+
+## Create a new module
+
+```sh
+module foo { 
+
+}
+````

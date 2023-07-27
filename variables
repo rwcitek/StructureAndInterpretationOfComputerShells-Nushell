@@ -1,0 +1,17 @@
+# Variables in Nushell
+
+## Abstract
+
+In Nushell, there are variables, limited to a specific scope.
+but you can also create system environment variables
+
+```sh
+let foo = 1
+let-env bar = 2
+# print them both out
+echo $foo
+1
+echo $env.bar
+2
+```
+
