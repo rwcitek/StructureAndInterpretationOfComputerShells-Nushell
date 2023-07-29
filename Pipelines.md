@@ -12,3 +12,28 @@ together  to form larger tasks. These commands can be grouped in the following o
 
 Obviously, some transformers can be sinks and some sinks can be transformers.
 
+
+
+## Sources
+
+The 'open' command can be used to source almost any common file format
+This can be used to feed into a larger pipeline to transform it somehow.
+
+
+
+## A common intermediate format
+
+Nushell uses NUON (Nushell Object Notation) a variation on JSON.
+
+
+NUON is also used for configuration files.
+
+
+NUON is a superset of JSON. All valid JSON is valid NUON.
+
+
+
+
+## SQLite databases
+
+SQLite databases are already understood by Nushell and get automatically converted to NUON.

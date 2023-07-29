@@ -6,7 +6,9 @@ Nushell is a modern re-interpretation of what a system shell should be.
 Nushell combines features and practices from current software engineering
 and traditional Unix-like OS shells. Nushell borrows concepts from Bash,
 Zsh and PowerShell. It also borrows programming language constructs from
-scripting languages like Python, Ruby and functional programming languages.
+scripting languages like Python, Ruby and functional programming languages
+like Elixir.
+
 
 
 ## Platforms
@@ -49,8 +51,8 @@ At this time, I would not use Nushell to control your critical infrastructure.
 
 ## Installation
 
-- homebrew: 'brew install nushell'
-- winget: 'winget install nushell'
+- MacOS: homebrew: 'brew install nushell'
+- Windows: winget: 'winget install nushell'
+- Linux: Install through Rust toolchain: 'cargo install nu'
 
-Available in some Linux package  distros' app repositories
 
