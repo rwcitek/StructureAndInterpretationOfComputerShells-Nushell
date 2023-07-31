@@ -52,6 +52,20 @@ Cantrell
 
 We do not have to rely on the many built-in filters that Nushell ships
 out the box. One time filters can be created on the fly by using closures or
-lambdas. In fact many Nushell filters like map and reduce require thim.
+lambdas. In fact many Nushell filters like each and reduce require them.
 
-TODO
+
+
+```sh
+ls | each {|e| $e | get name }
+```
+
+Although this is no different than just calling get name after ls, you can see
+how to  add more content to  each row.
+
+```sh
+ls *.md | each {|e| $"-->($e | get name)<--" }
+```
+
+
+Notice the rather strange way to perform string interpolation.
