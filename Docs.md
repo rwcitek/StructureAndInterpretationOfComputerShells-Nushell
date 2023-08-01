@@ -2,7 +2,7 @@
 
 ## Links
 
-[[Discord](https://discord.gg/NtAbbGn)
+[Discord](https://discord.gg/NtAbbGn)
 [GitHub](https://github.com/nushell/nushell)
 [Documentation](https://nushell.sh)
 

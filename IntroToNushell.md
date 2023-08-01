@@ -36,6 +36,8 @@ Nushell can be used as either in interactive mode as a REPL or as a script inter
 ## Is it production ready?
 
 At this time, I would not use Nushell to control your critical infrastructure.
+Nushell seems to be under heavy development. As of this writing, the version
+is 0.83. Much broke when I tried to use my config from 0.82.
 
 ## Installation
 
