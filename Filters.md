@@ -5,7 +5,7 @@
 Out of the box, Nushell comes with a number of built-in filters. But you can
 always add your own via a closures.
 
-## Builtin filters
+## Built-in filters
 
 - get : select only column(s) from table
 - select : Like get but returns the NUON object which is a table
