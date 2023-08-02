@@ -5,7 +5,8 @@
 The from command takes input from some file format like csv
 and converts into canonical Nushell records.
 These records are now in NUON form, a superset of JSON.
-
+The 'from' command is a filter. It is meant to be used with commnds that generate
+data in other formats other than JSON or NUON, like the open command.
 ```sh
 open file.txt | from csv
 ```
