@@ -2,12 +2,13 @@
 
 ## Abstract
 
-Nushell employs the functional programming paradigm in that it uses commands
-that work over data. 
+Nushell employs the functional programming paradigm in that it uses commands that work over data.
 
 ## Source of examples
 
-[Current U.S. Legislators in JSON](https://theunitedstates.io/congress-legislators/legislators-current.csv)
+[Current U.S. Legislators in JSON]( https://theunitedstates.io/congress-legislators/legislators-current.csv )
+
+## FIXME - Should there be a command to get the JSON?
 
 ## Getting the first 5 names
 
@@ -34,3 +35,4 @@ In this example, the Bio info is a record within each other record.
 open legislators.json | take 6 | select name bio | flatten
 ```
 
+## FIXME - Should there be output?
