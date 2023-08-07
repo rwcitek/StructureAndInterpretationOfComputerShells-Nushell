@@ -8,9 +8,12 @@ always add your own via a closures.
 ## Built-in filters
 
 - get : select only column(s) from table
+  * If coming from a table, returns column as a whole as a list
+  * Can also select numeric index from a list
 - select : Like get but returns the NUON object which is a table
-- take N  - Only take the N number of rows of a table
-- drop N | Drop the first N number of rows of a table
+- first : get the first N rows of table
+- skip : Skips N rows before returning the rest of table
+- drop : Drops N rows from the end of the table
 - transpose : Rotate the table by 90 degrees. Rows become columns, columns become rows
 
 ## Handy example of transpose
@@ -46,6 +49,24 @@ Brown
 Cantrell
 ```
 
+
+
+
+## Nushell provides many SQL-like functions for inserting and updating and merging tables
+
+You can add columns, insert rows and merge and concatenate tables.
+You can also update columns.  Since most output from Nushell is table based,
+this allows a lot of flexibility. Think of the hoops you'd to go through
+to accomplish with the Unix tools you normally might use.
+
+E.g.
+
+1. Convert raw data to .csv
+2. Import into a DB like sqlite
+3. Use SQL statements to slice and dice
+
+Nushell fits nicely between traditional data wranglin and more extensive
+alternatives.
 
 
 ## Using closures
