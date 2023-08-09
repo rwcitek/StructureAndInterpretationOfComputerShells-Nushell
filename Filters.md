@@ -18,7 +18,9 @@ always add your own via a closure.
 - skip : Skips N rows before returning the rest of table
 - drop : Drops N rows from the end of the table
 
+- last : Gets the final N rows of table
 - transpose : Rotate the table by 90 degrees. Rows become columns, columns become rows
+- from : Convert data in a pipeline to NUON tables or lists or records
 
 ## Handy example of transpose
 
@@ -98,3 +100,34 @@ $ ls *.md | each {|e| $"-->($e | get name)<--" }
 ```
 
 Notice the rather strange way to perform string interpolation.
+
+
+## The from command to convert data into Nushell data
+
+The from command takes input from some file format like csv
+and converts into canonical Nushell records.
+These records are now in NUON form, a superset of JSON.
+The 'from' command is a filter. It is meant to be used with commnds that generate
+data in other formats other than JSON or NUON, like the open command.
+```sh
+open file.txt | from csv
+```
+
+
+
+
+Once you have NUON,  you can slice and as usual in Nu commands.
+
+Note:  You do not have to export from sqlite to .csv as Nushell handles sqlite 
+files with the open command itself.
+
+
+## The 'into' command
+
+See the page: [DataTypes.md](DataTypes.md) for a more full description.
+
+The 'into' command with its subcommands helps to transform strings
+into internal data types for Nushell.
+
+This can be handy if trying to use text from a plain text file and needing
+to convert it into native Nushell data types for further processing.
