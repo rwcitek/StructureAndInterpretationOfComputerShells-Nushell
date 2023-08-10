@@ -10,7 +10,7 @@ Nushell has support for the following additional language features not found
 in other shells:
 
 - Blocks : That contain their own scope
-  * This has an effect on things like 'cd dir', remains only while block is in scope
-- Closures : Lambdafunctions thatare first class language variables and parameters.
-- Higher order commands that operate over their input like each, reduce, filter
--Parallel execution of code.
+  * This has an effect on things like `cd dir`, remains only while block is in scope
+- Closures : Lambda functions that are first class language variables and parameters.
+- Higher order commands that operate over their input like `each`, `reduce`, `filter`
+- Parallel execution of code.

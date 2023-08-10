@@ -3,7 +3,7 @@
 ## Abstract
 
 Out of the box, Nushell comes with a number of built-in filters. But you can
-always add your own via a closures.
+always add your own via a closure.
 
 ## Built-in filters
 
@@ -21,19 +21,16 @@ always add your own via a closures.
 ## Handy example of transpose
 
 Using the legislators.json file from the Data.md page, show the column headers
-one  column:
+one column:
 
 ```sh
-open legislators.json | take 1 | transpose
+$ open legislators.json | take 1 | transpose
 
-
- 0   id        {record 15 fields} 
- 1   name      {record 3 fields}  
- 2   bio       {record 2 fields}  
- 3   terms     [table 10 rows]    
+0   id        {record 15 fields} 
+1   name      {record 3 fields}  
+2   bio       {record 2 fields}  
+3   terms     [table 10 rows]    
 ```
-
-
 
 Note that the name field is another record that has 3 fields. (sometimes)
 
@@ -46,9 +43,10 @@ These fields are:
 We have to flatten out this record to get more access to it:
 
 ```sh
-open legislators.json | take 2 | flatten | get last
-Brown
-Cantrell
+$ open legislators.json | take 2 | get name | flatten | get last
+
+ 0   Brown    
+ 1   Cantwell 
 ```
 
 
@@ -75,21 +73,28 @@ alternatives.
 
 We do not have to rely on the many built-in filters that Nushell ships
 out the box. One time filters can be created on the fly by using closures or
-lambdas. In fact many Nushell filters like each and reduce require them.
-
-
+lambdas. In fact many Nushell filters like `each` and `reduce` require them.
 
 ```sh
-ls | each {|e| $e | get name }
+$ ls | each {|e| $e | get name } | take 5
+
+ 0   bin  
+ 1   boot 
+ 2   dev  
+ 3   etc  
+ 4   home 
 ```
 
 Although this is no different than just calling get name after ls, you can see
-how to  add more content to  each row.
+how to add more content to each row.
 
 ```sh
-ls *.md | each {|e| $"-->($e | get name)<--" }
-```
+$ ls *.md | each {|e| $"-->($e | get name)<--" }
 
+ 0   -->foobar.md<-- 
+ 1   -->hello.md<--  
+ 2   -->world.md<--  
+```
 
 Notice the rather strange way to perform string interpolation.
 
@@ -104,6 +109,7 @@ data in other formats other than JSON or NUON, like the open command.
 ```sh
 open file.txt | from csv
 ```
+
 
 
 
