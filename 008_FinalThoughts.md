@@ -37,4 +37,5 @@ work to  accomplish  some nifty data oriented tasks. I will not be making
 it my daily driver, at least not yet. And, I'd not recommend using in production
 or critical infrastructure settings.
 
-I've tried to collect my paper cuts here: [ProblemsAndCaveats.md](ProblemsAndCaveats.md]()
+I've tried to collect my paper cuts here: 
+[ProblemsAndCaveats.md](ProblemsAndCaveats.md)
