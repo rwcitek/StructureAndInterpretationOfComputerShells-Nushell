@@ -70,7 +70,7 @@ Here is a record of a name
 We use the get command to pull a value from a record given its key.
 
 
-### An table example using the record from the previous example
+### A table example using the record from the previous example
 
 ```sh
 [{ first: "John", last: "Collins"}, { first: "Mary", last: "Smith" }] | get last
