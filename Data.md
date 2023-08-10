@@ -58,3 +58,4 @@ open legislators.json | take 5 | select name bio | flatten
  3   Thomas     Carper     Thomas R. Carper       1947-01-23   M        Richard      ❎        ❎   
  4   Robert     Casey      Robert P. Casey, Jr.   1960-04-13   M        P.        Bob        Jr.    
 ```
+[Filters.md](004_Filters.md)

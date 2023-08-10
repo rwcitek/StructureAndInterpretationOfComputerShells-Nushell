@@ -32,3 +32,4 @@ $ ./greet.nu Johnny
 Hi,, Johnny
 ```
 
+[FinalThoughts.md](008_FinalThoughts.md)
