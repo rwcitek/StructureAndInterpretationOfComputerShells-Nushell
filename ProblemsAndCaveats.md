@@ -30,6 +30,14 @@ glob *.csv | sort
 Note: while this might break your muscle memory,  the sort command is more flexible
 with its many  more options.
 
+
+## Alias command is hindered
+
+If you try to alias a complex set of commands you will get an error telling you
+that  you can only alias commands and their options and parameters.
+
+The only way around this is to create your own custum commands.
+
 ## Documentation issues
 
 Note: The Command reference  page See [Links.md](Links.md)
