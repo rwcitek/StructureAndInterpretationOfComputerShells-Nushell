@@ -55,4 +55,4 @@ We also have a nice little Dockerfile for you.
 
 See: [Links.md](Links.md)
 
-[Pipelines.md](002_Pipelines.md)
+[Next: Pipelines.md](002_Pipelines.md)
