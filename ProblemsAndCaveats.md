@@ -37,6 +37,16 @@ If you try to alias a complex set of commands you will get an error telling you
 that  you can only alias commands and their options and parameters.
 
 The only way around this is to create your own custum commands.
+If there were a Nushell style guide, it would make the point that custom
+commands are more flexible than aliases. because you can pass parameters in
+myriad ways and even type check them. When I asked this question over on the
+Discord server, that is the most common response.
+
+Another solution is to do something like this:
+
+```sh
+alias ls-len = do { ls | length }
+```
 
 ## Documentation issues
 
@@ -54,3 +64,13 @@ See  [Links.md](Links.md) for links to some of the docs.
 - Broken links in the Nushell book
 - Deprecated commands and no docs on what the replacement is
 - Sparse entries in the Cookbook and the media gallery page.
+
+## Problems with piping input to nu from extrnal program using the --stdin flag:
+
+```bash
+echo ls | nu --stdin -c '??? what goes here?'
+```
+
+The trouble seems to be that the  command you want to be passed into the Nushell
+intepreter cannot be executed. E.g. there is no equivalent to the 'eval'
+command in Bash

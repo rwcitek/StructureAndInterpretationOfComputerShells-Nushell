@@ -2,7 +2,14 @@
 
 ## What
 
-Nushell is a modern re-interpretation of what a system shell should be.  Nushell combines features and practices from current software engineering and traditional Unix-like OS shells. Nushell borrows concepts from Bash, Zsh, and PowerShell. It also borrows programming language constructs from scripting languages like Python and Ruby, and functional programming languages like Elixir.
+Nushell is a modern re-interpretation of what a system shell should be.  Nushell
+combines features and practices from current software engineering and
+traditional Unix-like OS shells. Nushell borrows concepts from Bash, Zsh, and
+PowerShell. It also borrows programming language constructs from scripting
+languages like Python, Ruby, and Typescript.
+
+Nushell is designed around the functional programming paradigm where data
+flows through pipelines and is interacted with small bits of code along the way.
 It is also heavily influenced by database languages like SQL.
 
 
@@ -12,7 +19,8 @@ Nushell is designed to be cross-platform. It runs on:
 
 - Windows
 - MacOS
-- Linux/Unix
+- Linux
+- BSD
 
 ## Implemented in Rust, a safe compiled systems programming language
 
