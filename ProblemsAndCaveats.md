@@ -74,3 +74,21 @@ echo ls | nu --stdin -c '??? what goes here?'
 The trouble seems to be that the  command you want to be passed into the Nushell
 intepreter cannot be executed. E.g. there is no equivalent to the 'eval'
 command in Bash
+
+
+## Problems with duration literals
+
+At any point you can use durations literals as values in expressions
+
+- 2ms
+- 3day
+- 5wk
+
+But these specific literals do not work:
+- 5month
+- 12yr
+- 9dec
+
+
+
+[Link to discord message thread](https://discord.com/channels/601130461678272522/1141069246386946079)
