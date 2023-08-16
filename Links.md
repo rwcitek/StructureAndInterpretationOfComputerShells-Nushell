@@ -31,6 +31,10 @@ This is somewhat more powerful than in other shells.
 
 By @rwcitek on GitHub
 
+
+## The source of the 'jc' command a program to convert to JSON
+
+[https://www.mankier.com/1/jc#--git-log-s}(https://www.mankier.com/1/jc#--git-log-s)
 ## Videos
 
 [A quick intro to Nushell: Done for the Couchbase meetup](https://www.youtube.com/watch?v=bMpYyqWCzZk)
