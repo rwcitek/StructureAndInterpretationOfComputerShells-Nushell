@@ -83,4 +83,7 @@ We use the get command to pull a value from a record given its key.
 
 Above, the get command will return a list of columns that  map to the key names of each record.
 
-[Next: NushellProgramming.md](006_NushellProgramming.md)
+[Next: NushellProgramming.md](006_NushellProgramming.md) [Prev:  Filters.md](004_Filters.md)
+
+
+[Table of Contents](toc.md)

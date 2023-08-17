@@ -8,11 +8,11 @@ at BarCampGR in Grand Rapids, Mi.
 ## Go straight to the slides: 
 [First Slide: IntroToNushell.md](001_IntroToNushell.md)
 
-Or check out the example scripts and data.
 
-- Clone this repo
-- Look in the ./examples folder
-- Or, peruse all the other Markdown files not in the slide deck
+
+## Table of Contents for slides
+
+[Table of Contents](toc.md)
 
 
 ## About Nushell

@@ -39,3 +39,7 @@ or critical infrastructure settings.
 
 I've tried to collect my paper cuts here: 
 [ProblemsAndCaveats.md](ProblemsAndCaveats.md)
+
+[Prev: SlicingAndDicing.md](008_SlicingAndDicing.md)
+
+[Table of Contents](toc.md)

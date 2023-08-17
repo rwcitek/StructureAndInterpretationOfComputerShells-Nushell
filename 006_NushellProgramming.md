@@ -48,4 +48,7 @@ def my-in [age: duration] {
 Nice to meet you Sigmund Freud
 I see that you are 167yr 4month 2wk 2day 18hr 25min 17sec 722ms 196s 836ns years old
 ```
-[Next: Scripts.md](007_Scripting.md)
+[Next: Scripts.md](007_Scripting.md) [Prev: DataTypes.md](005_DataTypes.md)
+
+
+[Table of Contents](toc.md)
