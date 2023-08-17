@@ -37,4 +37,5 @@ NUON is a superset of JSON. All valid JSON is valid NUON.
 ## SQLite databases
 
 SQLite databases are already understood by Nushell and get automatically converted to NUON.
+
 [Next: Data.md](003_Data.md)
