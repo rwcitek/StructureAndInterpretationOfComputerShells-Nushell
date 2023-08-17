@@ -14,22 +14,25 @@ main function to collect these arguments as named parameters.
 
 E.g. Say  Hi to $1
 
-
-A file called: greet.nu
+In bash, create a file called: greet.nu
 
 ```sh
+cat <<'eof' > greet.nu
 #!/usr/bin/env nu
 # Notice we can use shebangs
 
 def main [person: string] {
   echo $"Hi, ($person)"
 }
+eof
 ```
 
 ```bash
-$ chmod +x  greet.nu
-$ ./greet.nu Johnny
-Hi,, Johnny
+chmod +x  greet.nu
+./greet.nu Johnny
+```
+```sh
+Hi, Johnny
 ```
 
 [Next: FinalThoughts.md](008_FinalThoughts.md)
