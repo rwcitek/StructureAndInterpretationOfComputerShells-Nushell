@@ -8,6 +8,6 @@
 - [Filters](004_Filters.md)
 - [Data Types](005_DataTypes.md)
 - [Nushell Programming](006_NushellProgramming.md)
-- [Scripting](007_Scripting.md)
+- [Scripts](007_Scripts.md)
 [Slicing and dicing](008_SlicingAndDicing.md)
 - [Final thoughts](009_FinalThoughts.md)

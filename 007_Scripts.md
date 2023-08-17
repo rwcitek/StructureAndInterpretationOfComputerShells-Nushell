@@ -32,7 +32,7 @@ $ ./greet.nu Johnny
 Hi,, Johnny
 ```
 
-[Next:SlicingAndDicing.md](SlicingAndDicing.md) [Prev  NushellProgramming.md](006_NushellProgramming.md)
+[Next: SlicingAndDicing.md](008_SlicingAndDicing.md) [Prev:  NushellProgramming.md](006_NushellProgramming.md)
 
 
 [Table of Contents](toc.md)

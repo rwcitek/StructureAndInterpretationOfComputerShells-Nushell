@@ -204,6 +204,6 @@ source only-robots.nu
 ````
 
 
-[Next: FinalThoughts.md](009_FinalThoughts.md) [Prev: Scripting.md](007_Scripting.md)
+[Next: FinalThoughts.md](009_FinalThoughts.md) [Prev: Scripts.md](007_Scripts.md)
 
 [Table of Contents](toc.md)
