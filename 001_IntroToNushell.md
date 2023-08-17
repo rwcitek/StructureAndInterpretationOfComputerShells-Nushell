@@ -59,7 +59,7 @@ is 0.83.1 Much broke when I tried to use my config from 0.82.
 - Linux: Install through Rust toolchain: 'cargo install nu'
   * also Linux homebrew and some package managers.
 
-We also have a nice little Dockerfile for you.
+We also have a nice little [Dockerfile for you](https://gist.github.com/rwcitek/426fd6467c3dd0243db67194835d6eed).
 
 See: [Links.md](Links.md)
 

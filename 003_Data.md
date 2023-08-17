@@ -16,7 +16,8 @@ save legislators.json
 
 ```sh
 open legislators.json | take 5 |  get name
-
+```
+```sh
  #    first       last        official_full       middle    nickname   suffix 
  0   Sherrod    Brown      Sherrod Brown            ❎         ❎        ❎   
  1   Maria      Cantwell   Maria Cantwell           ❎         ❎        ❎   
@@ -30,7 +31,9 @@ open legislators.json | take 5 |  get name
 In this example, the Bio info is a record within each other record.
 
 ```sh
-/> open legislators.json | take 1 | select name bio | to json
+open legislators.json | take 1 | select name bio | to json
+```
+```sh
 [
   {
     "name":
@@ -50,7 +53,8 @@ In this example, the Bio info is a record within each other record.
 
 ```sh
 open legislators.json | take 5 | select name bio | flatten
-
+```
+```sh
  #    first       last        official_full        birthday    gender   middle    nickname   suffix 
  0   Sherrod    Brown      Sherrod Brown          1952-11-09   M          ❎         ❎        ❎   
  1   Maria      Cantwell   Maria Cantwell         1958-10-13   F          ❎         ❎        ❎   

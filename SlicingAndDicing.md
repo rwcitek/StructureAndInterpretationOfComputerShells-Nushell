@@ -1,11 +1,11 @@
 # How to slice and dice all the things
 
-
 ## Not your granpappy's ls
 
 ```sh
-
->>  ls examples
+ls examples
+```
+```sh
  #             name              type   size     modified   
  0   examples/add2.nu            file    64 B   2 weeks ago 
  1   examples/current-time.nu    file   115 B   3 days ago  
@@ -24,17 +24,19 @@ We see that ls returns us structured data which is then displayed in a tabular f
 We can always get back to the original system ls by preceding it with the '^' caret.
 
 ```sh
->>> ^ls examples
+^ls examples
+```
+```sh
 add2.nu     head-date.nu  my-cmd.nu  test-mk-greet.nu  utils.nu
 current-time.nu  mk-greet.nu   my-in.nu   update-col.nu
 ````
 
-
 There is even the long form of ls:
 
 ```sh
-
-thor nushell >>  > ls -l examples/
+ls -l examples/
+```
+```sh
  #         name          type   target   readonly     mode      num_links   ... 
  0   examples/add2.nu    file            false      rw-r--r--           1   ... 
  1   examples/current-   file            false      rw-r--r--           1   ... 
@@ -54,40 +56,40 @@ thor nushell >>  > ls -l examples/
 
 ```sh
 ls | length
+```
+```sh
 24
 ```
 
 ## Get the nth row from a table
 
 ```sh
->>> ls | select 4
-
+ls | select 4
+```
+```sh
  #         name         type    size     modified  
  0   005_DataTypes.md   file   2.4 KB   4 days ago 
 ```
 
 Note: the select returns a new table.
 
-
-
 ## Getting only the directories
 
 ```sh
->>> ls | where type == dir
-
+ls | where type == dir
+```
+```sh
  #     name     type    size     modified   
  0   data       dir    4.1 KB   4 hours ago 
  1   examples   dir    4.1 KB   3 days ago  
  2   tmp        dir    4.1 KB   3 days ago  
 ```
 
+In the `data` directory, we have some CDR records in .csv format of the form:
 
-
-In the data directory, we have some CDR records in .csv format of the form:
-
+```
 Date/Time,Calling #,Called #,Duration,Amount,Tax,Total,Destination,Extension
 07/31/2023 17:08:33,18885551212,18665551212,2 min,$0.0000,$0.0000,$0.0000,Incoming,
-```
 ```
 
 We'd like to reformat the Duration field into an actual duration type
@@ -100,9 +102,14 @@ datetime data type. This will let us focus only those calls in a given month, sa
 
 ```sh
 open 01.csv
-open 01.csv | update Date/Time {|r| $r."Date/Time" | into datetime } | update Date/Time {|r| $r."Date/Time" | into datetime } |  update Duration {|r| $r.Duration | str replace ' ' '' | into duration } | save 01.nuon
 ```
-
+```sh
+open 01.csv |
+update Date/Time {|r| $r."Date/Time" | into datetime } |
+update Date/Time {|r| $r."Date/Time" | into datetime } |
+update Duration {|r| $r.Duration | str replace ' ' '' | into duration } |
+save 01.nuon
+```
 
 Note: The use of the 'save' command  to store our transformed data into a .nuon file.
 
@@ -124,18 +131,16 @@ human friendly one. But we can use the 'jc' command to convert it first into
 JSON. then the 'from json' command to  NUON.
 
 ```sh
--log | from json | select 0
+git-log | from json | select 0
+```
+```sh
  #                commit                  author         author_email       ... 
  0   b2e9f160307a604d0da98cd834886063   Ed Howland   ed.howland@gmail.com   ... 
      0e84c2c5                                                                   
 ```
 
-
-
 In addition to the 'from' command is the 'to' command which does the opposite.
 exercise left for the reader.
-
-
 
 Obeying the DRY principle (Do not repeat Yourself)
 
@@ -152,8 +157,6 @@ Now our call looks like this:
 ```sh
 open 01.csv | u-datetime | u-dur | save 01.nuon
 ```
-
-
 
 We can dry it up further by creating a custom Nushell command (function) to do this
 
@@ -177,7 +180,11 @@ csv-nuon 01.csv 01.nuon
 
 
 ```sh
->>  > open `01.nuon` | where Duration < 1.1min and Date/Time < ((date  now) - 31day) and Destination == "Incoming" | length
+open `01.nuon` |
+where Duration < 1.1min and Date/Time < ((date  now) - 31day) and Destination == "Incoming" |
+length
+```
+```sh
 680
 ```
 
@@ -194,12 +201,18 @@ Let's create a timebox to filter our dataset between 2 values
 source timebox-cdr.nu
 source only-robots.nu
 
->>> let jul1 = 2023-07-01
->>> let jul31 = $jul1 + 30day
+let jul1 = 2023-07-01
+let jul31 = $jul1 + 30day
 
->>  > open `01.nuon` | timebox $jul1 $jul31 | length
+open `01.nuon` | timebox $jul1 $jul31 | length
+```
+```sh
 246
->>  > open `01.nuon` | timebox $jul1 $jul31 | find-robots  | length
+```
+```sh
+open `01.nuon` | timebox $jul1 $jul31 | find-robots  | length
+```
+```sh
 213
 ````
 

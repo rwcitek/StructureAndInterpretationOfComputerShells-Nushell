@@ -28,9 +28,12 @@ The parameters of a command can also be optionally statically typed:
 def my-cmd [name: string, age: int] {
   echo $"Nice to meet you ($name)\nI see that you are ($age) years old"
 }
-
+```
+```sh
 # Now call it:
->>> my-cmd "Fred Smith" 53
+my-cmd "Fred Smith" 53
+```
+```sh
 Nice to meet you Fred Smith
 I see that you are 53 years old
 ```
@@ -42,9 +45,12 @@ Now let's make a version that takes input from a pipe:
 def my-in [age: duration] {
   echo $"Nice to meet you ($in)\nI see that you are ($age) years old"
 }
+```
+```sh
 # Now really try it out
-
->>>  > echo "Sigmund Freud" | my-in ((date now) - 1856-05-06)
+echo "Sigmund Freud" | my-in ((date now) - 1856-05-06)
+```
+```sh
 Nice to meet you Sigmund Freud
 I see that you are 167yr 4month 2wk 2day 18hr 25min 17sec 722ms 196s 836ns years old
 ```

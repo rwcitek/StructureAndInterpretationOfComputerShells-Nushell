@@ -2,15 +2,16 @@
 
 ## Abstract
 
-Nushell is more like other so-called scripting languages like Python, Ruby and
+Nushell is more like other so-called scripting languages like Python, Ruby, and
 others with regard to supported internal data types than like most shells.
 In most shells, the prime data type is a string, but there are adjustments
 for collections like arrays and associative arrays (e.g. Hashmaps or dicts).
-In some cases, shells like Bash have special syntax to handle ints and  arithmetic
-expressions without having to send input to commands like bc, dc and expr.
+In some cases, shells like Bash have special syntax to handle ints and arithmetic
+expressions without having to send input to commands like bc, dc, and expr.
 
 In Nushell, all these data types are built-in and are part of the language
-without needing to treat them as strings first and/or using special syntax. Morelike Python works.
+without needing to treat them as strings first and/or using special syntax.
+More like how Python works.
 
 In addition to data types you might expect, Nushell has some additional types that
 you might find in other programming languages but you would need to pull
@@ -64,6 +65,8 @@ Here is a record of a name
 
 ```sh
 { first: "Mary", last: "Smith" } | get first
+```
+```sh
 0: Mary
 ```
 
@@ -74,14 +77,13 @@ We use the get command to pull a value from a record given its key.
 
 ```sh
 [{ first: "John", last: "Collins"}, { first: "Mary", last: "Smith" }] | get last
-
-
+```
+```sh
  0   Collins 
  1   Smith   
 ```
 
-
-Above, the get command will return a list of columns that  map to the key names of each record.
+Above, the `get` command will return a list of columns that  map to the key names of each record.
 
 [Next: NushellProgramming.md](006_NushellProgramming.md) [Prev:  Filters.md](004_Filters.md)
 
