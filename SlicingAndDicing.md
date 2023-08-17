@@ -180,3 +180,25 @@ csv-nuon 01.csv 01.nuon
 >>  > open `01.nuon` | where Duration < 1.1min and Date/Time < ((date  now) - 31day) and Destination == "Incoming" | length
 680
 ```
+
+
+## Final cleanup
+
+Let's create a timebox to filter our dataset between 2 values
+
+
+
+## Now we can really get cooking with gas!
+
+```sh
+source timebox-cdr.nu
+source only-robots.nu
+
+>>> let jul1 = 2023-07-01
+>>> let jul31 = $jul1 + 30day
+
+>>  > open `01.nuon` | timebox $jul1 $jul31 | length
+246
+>>  > open `01.nuon` | timebox $jul1 $jul31 | find-robots  | length
+213
+````

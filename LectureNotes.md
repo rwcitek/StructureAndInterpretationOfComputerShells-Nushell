@@ -93,3 +93,24 @@ Then lets save them in a file called: aliases.nu and then source that file.
 >>> Over to Robert >>>
 
 
+
+
+## Ok, let's actually get to the slicing and dicing!
+
+We'll create 2 functions.
+
+1. timebox : limit the records between 2 dates
+2. find-robots : Limit the result to those where the Duration column is less than or equal to 1.1 minute.
+
+
+>>> Over to Robert >>>
+
+
+
+## Final thoughts
+
+we could take this further. Say, we could use the  sort-by command to find
+callers by their phone number. However, this data here is sanitized.
+
+We hope we have given you a taste of Nushell. Check out the Links.md for
+links to all the stuff.
