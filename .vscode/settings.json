@@ -1,4 +1,7 @@
 {
     "terminal.integrated.allowChords": false,
-    "terminal.integrated.sendKeybindingsToShell": true
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "main"
+    ]
 }
