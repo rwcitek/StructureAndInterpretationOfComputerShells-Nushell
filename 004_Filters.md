@@ -129,9 +129,8 @@ The 'into' command with its subcommands helps to transform strings
 into internal data types for Nushell.
 
 This can be handy if trying to use text from a plain text file and needing
-to convert it into native Nushell data types for further processing.
-
-[Next: DataTypes.md](005_DataTypes.md)
-
+to convert it into native Nushell data types for further processing.[DataTypes.md](005_DataTypes.md)
+[Next: DataTypes.md](005_DataTypes.md) [Prev: Data.md](003_Data.md)
 
 
+[Table of Contents](toc.md)

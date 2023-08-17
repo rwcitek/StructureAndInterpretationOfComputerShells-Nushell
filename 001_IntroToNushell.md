@@ -64,3 +64,6 @@ We also have a nice little [Dockerfile for you](https://gist.github.com/rwcitek/
 See: [Links.md](Links.md)
 
 [Next: Pipelines.md](002_Pipelines.md)
+
+
+[Table of Contents](toc.md)
