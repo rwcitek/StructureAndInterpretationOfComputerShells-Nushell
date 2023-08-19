@@ -15,6 +15,15 @@ Nushell has the ability to run some commands in parallel. Useful if you have mul
 ## Sequences and ranges
 
 In addition to the normal `seq` command for ranges numerically, Nushell also has `seq char` and `seq date`
+In addition, Nushell supports the 'range' data type natively.
+
+```sh
+# create an infinite range from 6 to infinity, but take only 5 of them
+6.. | take 5
+```
+
+
+
  
 ## Nushell http commands
 
@@ -81,3 +90,43 @@ date/time format seems to be in relative to the current date and time. E.g.
 ```sh
 >>> ls first 3
 
+
+
+## Reimplementing the old DOS ren command
+
+In old DOS,  you could do something like this to rename the extension of all files:
+
+```
+C> ren *.txt *.md
+```
+
+This can be done in Nushell with a custom command:
+
+```sh
+# ren - like DOS ren command E.g. ren *.txt *.md
+def  ren [src: glob, dest: glob] {
+  let ext = ($dest | path parse).extension
+  glob $src | each {|f| mv $f ($f | path parse | update extension $ext | path join) }
+}
+
+```
+
+Then it can be run like this:
+
+
+```sh
+# create a list of file names from  a rang 
+ 1..9 | each {|e| touch $"nfile($e).txt" }
+ empty list 
+  > ls
+ #      name      type   size   modified 
+ 0   nfile1.txt   file    0 B   now      
+ 1   nfile2.txt   file    0 B   now      
+ 2   nfile3.txt   file    0 B   now      
+ 3   nfile4.txt   file    0 B   now      
+ 4   nfile5.txt   file    0 B   now      
+ 5   nfile6.txt   file    0 B   now      
+ 6   nfile7.txt   file    0 B   now      
+ 7   nfile8.txt   file    0 B   now      
+ 8   nfile9.txt   file    0 B   now      
+```

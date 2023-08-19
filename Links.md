@@ -37,6 +37,14 @@ By @rwcitek on GitHub
 [https://www.mankier.com/1/jc#--git-log-s}(https://www.mankier.com/1/jc#--git-log-s)
 ## Videos
 
+## Video, audio and chat from August 17th, 2023 presentation  by Robert Citek and Ed Howland
+
+to the August meeting of the St. Louis Linux User's Group
+
+[Main StLLinux.org web site](https://www.stllinux.org)
+
+[Presentations page with links to video, audio and chat for 08/17/2023 meeting](https://www.sluug.org/resources/presentations/body.html)
+
 [A quick intro to Nushell: Done for the Couchbase meetup](https://www.youtube.com/watch?v=bMpYyqWCzZk)
 
 By JT, one of the original founders of Nushell and worked on Typescript
@@ -52,4 +60,31 @@ By JT, one of the original founders of Nushell and worked on Typescript
 
 
 Covers renaming and updating columns
+
+
+
+## External resources
+
+Subreddit for Nushell
+
+https://www.reddit.com/r/Nushell/?rdt=57185
+
+
+
+## ICCF Holland home page
+
+The charity supported by Bram Moolenaar    the creator of the Vim text editor:
+
+[ICCF Holland](https://www.iccf-holland.org/)
+The Wikipeda page fro ICCF:
+
+
+
+[ICCF page on Wikipedia.org](https://en.wikipedia.org/wiki/ICCF_Holland)
+
+
+### page on Eikipedia.org
+
+[Bram Moolenaar's page on Wikipedia.org](https://en.wikipedia.org/wiki/Bram_Moolenaar)
+
 

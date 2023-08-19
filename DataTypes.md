@@ -18,6 +18,7 @@ either a standard library or pull from the languages package manager.
 
 E.g.
 
+- ranges
 - DateTime
 - Duration
 - Filesize
@@ -87,3 +88,24 @@ Above, the get command will return a list of columns that  map to the key names 
 
 
 [Table of Contents](toc.md)
+
+
+## Ranges
+
+Ranges are official data types in Nushell.
+
+```sh
+1..9 | each {|r| touch  $"blarney($r).txt" }
+ls
+
+ #       name       type   size   modified 
+ 0   blarney1.txt   file    0 B   now      
+ 1   blarney2.txt   file    0 B   now      
+ 2   blarney3.txt   file    0 B   now      
+ 3   blarney4.txt   file    0 B   now      
+ 4   blarney5.txt   file    0 B   now      
+ 5   blarney6.txt   file    0 B   now      
+ 6   blarney7.txt   file    0 B   now      
+ 7   blarney8.txt   file    0 B   now      
+ 8   blarney9.txt   file    0 B   now      
+```
