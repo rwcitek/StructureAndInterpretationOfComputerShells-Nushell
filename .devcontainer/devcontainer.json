@@ -8,8 +8,9 @@
 			"extensions": [
 				"ms-python.python",
 				"ms-azuretools.vscode-docker",
-				"redhat.vscode-yaml",
+				"redhat.vscode-yaml"
 			]
 		}
-	}
+	},
+	"postCreateCommand": "bash .devcontainer/install-nushell.sh"
 }
