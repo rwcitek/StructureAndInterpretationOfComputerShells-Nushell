@@ -11,3 +11,12 @@ elinks --dump https://github.com/nushell/nushell/releases |
   sudo tar -xzf -
 sudo ln -snf ./nu-*-unknown-linux-gnu/nu
 yes | nu >& /dev/null || true
+
+
+cat <<'eof' | sudo tee /usr/local/bin/nushell > /dev/null
+#!/usr/bin/env bash
+cat > /tmp/nushell.tmp.nu
+nu --config ${HOME}/.config/nushell/config.nu /tmp/nushell.tmp.nu
+eof
+sudo chmod +x /usr/local/bin/nushell
+
