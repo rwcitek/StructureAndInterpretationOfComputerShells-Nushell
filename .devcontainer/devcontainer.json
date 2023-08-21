@@ -1,5 +1,16 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-  }
+	"name": "Nushell CodeSpace Environment",
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-azuretools.vscode-docker",
+				"redhat.vscode-yaml"
+			]
+		}
+	},
+	"postCreateCommand": "bash .devcontainer/install-nushell.sh"
 }
