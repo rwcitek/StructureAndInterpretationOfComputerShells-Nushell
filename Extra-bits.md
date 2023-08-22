@@ -115,7 +115,7 @@ Then it can be run like this:
 
 
 ```sh
-# create a list of file names from  a rang 
+# create a list of file names from  a range 
  1..9 | each {|e| touch $"nfile($e).txt" }
  empty list 
   > ls
@@ -130,3 +130,53 @@ Then it can be run like this:
  7   nfile8.txt   file    0 B   now      
  8   nfile9.txt   file    0 B   now      
 ```
+
+
+## Closures cannot capture mutable values
+
+This does work
+
+
+```sh
+let y = 10
+1..4 | each {|x| x * y }
+
+ 0   10 
+ 1   20 
+ 2   30 
+ 3   40
+```
+
+But this does not work:
+
+
+
+```sh
+
+thor nushell >>  > mut y = 10
+thor nushell >>  > 1..4 | each {|x| $y = ($x * 10) }
+Error: nu::parser::expected_keyword
+
+   Capture of mutable variable.
+   [entry #2:1:1]
+ 1  1..4 | each {|x| $y = ($x * 10) }
+                     
+                       capture of mutable variable
+   
+
+```
+
+
+## neat tricks and one-liners
+
+```sh
+cal | select 3
+```
+
+Gets the 3rd week of the current month
+
+```bash
+nu -c 'echo $env.PATH'
+```
+
+Every path component on its own line

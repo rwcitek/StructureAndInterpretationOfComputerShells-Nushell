@@ -35,6 +35,24 @@ By @rwcitek on GitHub
 ## The source of the 'jc' command a program to convert to JSON
 
 [https://www.mankier.com/1/jc#--git-log-s}(https://www.mankier.com/1/jc#--git-log-s)
+
+### The releases page of jc where you can get binaries for your system
+
+[JC Releases](https://github.com/kellyjonbrazil/jc/releases)
+
+
+I found that on Debian Bullseye (v11) it was better
+to get the tarball for x64 Linux and extract then mv the 'jc' file into your $PATH
+
+On MacOS:
+
+```bash
+brew install jc
+```
+
+
+
+
 ## Videos
 
 ## Video, audio and chat from August 17th, 2023 presentation  by Robert Citek and Ed Howland
